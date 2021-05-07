@@ -1,5 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+:root {
+    --dark-color: #182952;
+    --white-color: #ffffff;
+    --purple-dark: #2b3595;
+    --purple-light: #7045af;
+    --pink-color: #e14594;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding: 5rem;
+}
+.card {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--purple-dark) 0%, var(--purple-light) 100%);
 }
