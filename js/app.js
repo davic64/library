@@ -20,6 +20,11 @@ function addBook(title, author, numPages, reading) {
     myLibrary.push({id: myLibrary.length, ...book});
 }
 
+function deleteBook(id) {
+    myLibrary = myLibrary.filter(book => id !== book.id);
+    enumerateBooks();
+}
+
 function enumerateBooks() {
     CardsContainer.textContent = "";
     myLibrary.map(book => {
@@ -33,7 +38,7 @@ function enumerateBooks() {
         span.style.fontSize = "14px";
         span.style.color ="#F35F5F"
         span.style.cursor ="pointer"
-        span.addEventListener('click', () => alert(book.id));
+        span.addEventListener('click', () => deleteBook(book.id));
 
 
         span.textContent = "Delete"
