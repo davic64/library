@@ -1,5 +1,6 @@
 const CardsContainer = document.querySelector('.cards');
 const Modal = document.querySelector('.modal');
+const form = document.querySelector("#form");
 
 const title = document.querySelector("#title");
 const author = document.querySelector("#author");
@@ -58,7 +59,11 @@ function openModal() {
     Modal.classList.toggle("closeModal");
 }
 
-function setBook() {
+form.addEventListener("submit", setBook);
+
+function setBook(e) {
+    debugger;
+    e.preventDefault();
     addBook(title.value, author.value, numPages.value, reading.checked);
     openModal();
     title.value = "";
