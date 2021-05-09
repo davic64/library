@@ -9,11 +9,13 @@ const reading = document.querySelector("#reading");
 
 let myLibrary = [];
 
-function Book(title, author, numPages, reading) {
-    this.title = title;
-    this.author = author;
-    this.numPages = numPages;
-    this.reading = reading;
+class Book {
+    constructor(title, author, numPages, reading) {
+        this.title = title;
+        this.author = author;
+        this.numPages = numPages;
+        this.reading = reading;
+    }
 }
 
 function addBook(title, author, numPages, reading) {
